@@ -33,7 +33,7 @@ static int goal(float x, float y)
     // printf("GOAL! Left net hit at x:%.2f, y=%.2f\n", x, y);
 
     // Check for y
-    float start_of_y_goal_line = CENTER_Y - GOAL_HEIGHT / 2;
+    float start_of_y_goal_line = CENTER_Y + PITCH_Y - GOAL_HEIGHT / 2;
     if (start_of_y_goal_line <= y + BALL_RADIUS && y + BALL_RADIUS <= start_of_y_goal_line + GOAL_HEIGHT) {
         // Check for x
         // MY_TODO: This is wrong. You need to add the
@@ -249,7 +249,7 @@ void verify_shoot(struct Ball *ball, bool kickoff)
         }
     }
     if (kickoff) {
-        if (!((ball->velocity.x < 0 && ball->possessor->team == 1) || (ball->velocity.x > 0 && ball->possessor->team == 2))) {
+        if (!((ball->velocity.x <= 0 && ball->possessor->team == 1) || (ball->velocity.x >= 0 && ball->possessor->team == 2))) {
             printf(" ERROR: You must pass to your own half! (team %d, player %d)\n", ball->possessor->team, ball->possessor->kit);
         }
     }
