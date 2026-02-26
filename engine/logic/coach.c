@@ -42,7 +42,7 @@ bool coach_both_teams = true;
  * ------------------------------------------------------------------------- */
 
 /* Team 1 movement logic */
-<<<<<<< HEAD
+
 void movement_logic_1_0(struct Player *self, const struct Scene *scene) {
     (void)scene;
     self->velocity.x = 10;
@@ -53,14 +53,13 @@ void movement_logic_1_2(struct Player *self, const struct Scene *scene) { (void)
 void movement_logic_1_3(struct Player *self, const struct Scene *scene) { (void)scene; }
 void movement_logic_1_4(struct Player *self, const struct Scene *scene) { (void)scene; }
 void movement_logic_1_5(struct Player *self, const struct Scene *scene) { (void)scene; }
-=======
+
 void movement_logic_1_0(struct Player *self, struct Scene *scene) { (void)scene; }
 void movement_logic_1_1(struct Player *self, struct Scene *scene) { (void)scene; }
 void movement_logic_1_2(struct Player *self, struct Scene *scene) { (void)scene; }
 void movement_logic_1_3(struct Player *self, struct Scene *scene) { (void)scene; }
 void movement_logic_1_4(struct Player *self, struct Scene *scene) { (void)scene; }
 void movement_logic_1_5(struct Player *self, struct Scene *scene) { (void)scene; }
->>>>>>> bf8bc4fe23d6e05610f139ed7c689b9257fdac54
 
 /* Team 2 movement logic */
 void movement_logic_2_0(struct Player *self, struct Scene *scene) { (void)scene; }
@@ -71,18 +70,18 @@ void movement_logic_2_4(struct Player *self, struct Scene *scene) { (void)scene;
 void movement_logic_2_5(struct Player *self, struct Scene *scene) { (void)scene; }
 
 /* Team 1 shooting logic */
-<<<<<<< HEAD
-void shooting_logic_1_0(struct Player *self, const struct Scene *scene) {
-//         struct Vec2 shoot_to = {960, 406};
-//         struct Vec2 out = {0};
-//         vec2_sub(&out, &shoot_to, &scene->ball->position);
-//         shoot_to.x -= scene->ball->position.x;
-//         shoot_to.y -= scene->ball->position.y;
-//         // Because the vec2.h doesn't have normailze function :)
-//         float len = hypotf(shoot_to.x, shoot_to.y);
-//         self->velocity.x = (shoot_to.x / len) * self->talents.shooting;
-//         self->velocity.y = (shoot_to.y / len) * self->talents.shooting;
-}
+
+// void shooting_logic_1_0(struct Player *self, const struct Scene *scene) {
+// //         struct Vec2 shoot_to = {960, 406};
+// //         struct Vec2 out = {0};
+// //         vec2_sub(&out, &shoot_to, &scene->ball->position);
+// //         shoot_to.x -= scene->ball->position.x;
+// //         shoot_to.y -= scene->ball->position.y;
+// //         // Because the vec2.h doesn't have normailze function :)
+// //         float len = hypotf(shoot_to.x, shoot_to.y);
+// //         self->velocity.x = (shoot_to.x / len) * self->talents.shooting;
+// //         self->velocity.y = (shoot_to.y / len) * self->talents.shooting;
+// }
 void shooting_logic_1_1(struct Player *self, const struct Scene *scene) { (void)scene; }
 void shooting_logic_1_2(struct Player *self, const struct Scene *scene) { (void)scene; }
 void shooting_logic_1_3(struct Player *self, const struct Scene *scene) { (void)scene; }
@@ -111,7 +110,6 @@ void shooting_logic_1_2(struct Player *self, struct Scene *scene) { (void)scene;
 void shooting_logic_1_3(struct Player *self, struct Scene *scene) { (void)scene; }
 void shooting_logic_1_4(struct Player *self, struct Scene *scene) { (void)scene; }
 void shooting_logic_1_5(struct Player *self, struct Scene *scene) { (void)scene; }
->>>>>>> bf8bc4fe23d6e05610f139ed7c689b9257fdac54
 
 /* Team 2 shooting logic */
 void shooting_logic_2_0(struct Player *self, struct Scene *scene) { (void)scene; }
@@ -122,7 +120,7 @@ void shooting_logic_2_4(struct Player *self, struct Scene *scene) { (void)scene;
 void shooting_logic_2_5(struct Player *self, struct Scene *scene) { (void)scene; }
 
 /* Team 1 change_state logic */
-<<<<<<< HEAD
+
 void change_state_logic_1_0(struct Player *self, const struct Scene *scene) {
     if (scene->state == STATE_RESTARTING || (scene->remaining_time <= 120.0F && scene->remaining_time >= 119.5F)) {
         // This is kick off!
@@ -136,14 +134,6 @@ void change_state_logic_1_2(struct Player *self, const struct Scene *scene) { (v
 void change_state_logic_1_3(struct Player *self, const struct Scene *scene) { (void)scene; }
 void change_state_logic_1_4(struct Player *self, const struct Scene *scene) { (void)scene; }
 void change_state_logic_1_5(struct Player *self, const struct Scene *scene) { (void)scene; }
-=======
-void change_state_logic_1_0(struct Player *self, struct Scene *scene) { (void)scene; }
-void change_state_logic_1_1(struct Player *self, struct Scene *scene) { (void)scene; }
-void change_state_logic_1_2(struct Player *self, struct Scene *scene) { (void)scene; }
-void change_state_logic_1_3(struct Player *self, struct Scene *scene) { (void)scene; }
-void change_state_logic_1_4(struct Player *self, struct Scene *scene) { (void)scene; }
-void change_state_logic_1_5(struct Player *self, struct Scene *scene) { (void)scene; }
->>>>>>> bf8bc4fe23d6e05610f139ed7c689b9257fdac54
 
 /* Team 2 change_state logic */
 void change_state_logic_2_0(struct Player *self, struct Scene *scene) { (void)scene; }
